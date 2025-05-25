@@ -11,7 +11,7 @@ pipeline {
     }
     stage('CompileandRunCheckov') {
             steps {	
-		sh 'mvn clean verify checkov -d .'
+		sh 'checkov -d .'
 			}
     }
 	stage('RunSCAAnalysisUsingSnyk') {
