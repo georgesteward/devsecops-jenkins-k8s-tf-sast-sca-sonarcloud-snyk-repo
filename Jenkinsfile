@@ -11,7 +11,7 @@ pipeline {
     }
     stage('CompileandRunCheckov') {
             steps {	
-		sh 'checkov -d .'
+		sh 'alias checkov="~/.venvs/checkov-env/bin/checkov"; checkov -d .'
 			}
     }
 	stage('RunSCAAnalysisUsingSnyk') {
