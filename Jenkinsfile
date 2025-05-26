@@ -45,12 +45,6 @@ pipeline {
 		   }
 	     }
     	   }
-	   stage('Snyk Monitor') {
-      	     steps {
-                sh 'snyk monitor --all-projects'
-             }
-           }
-        }
         options {
             preserveStashes()
             timestamps()
