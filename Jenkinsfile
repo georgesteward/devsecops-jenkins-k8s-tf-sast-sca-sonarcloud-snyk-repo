@@ -47,9 +47,7 @@ pipeline {
     	   }
            stage('SnykMonitor') {
              steps {		
-		   {
 		   sh 'mvn snyk:monitor'
-		   }
 	     }
     	   }
         options {
