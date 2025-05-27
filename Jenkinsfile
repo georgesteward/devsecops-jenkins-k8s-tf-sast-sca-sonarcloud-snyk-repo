@@ -45,9 +45,11 @@ pipeline {
 		   }
 	     }
     	   }
+	}
+	
         options {
             preserveStashes()
             timestamps()
         }
     }
-}
+
