@@ -45,7 +45,6 @@ pipeline {
 		   }
 	     }
     	   }
-	
         stage('SnykMonitor') {
              steps {		
 		withCredentials([string(credentialsId: 'SNYK_TOKEN', variable: 'SNYK_TOKEN')]) {
@@ -53,6 +52,7 @@ pipeline {
 		   }
 	     }
     	   }
+		
 	}
 
         options {
