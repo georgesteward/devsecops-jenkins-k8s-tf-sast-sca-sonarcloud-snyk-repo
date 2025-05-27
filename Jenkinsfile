@@ -42,12 +42,6 @@ pipeline {
              steps {		
 		withCredentials([string(credentialsId: 'SNYK_TOKEN', variable: 'SNYK_TOKEN')]) {
 		   sh 'mvn snyk:test -fn'
-		   }
-	     }
-    	   }
-           stage('SnykMonitor') {
-             steps {		
-		withCredentials([string(credentialsId: 'SNYK_TOKEN', variable: 'SNYK_TOKEN')]) {
 		   sh 'mvn snyk:monitor'
 		   }
 	     }
