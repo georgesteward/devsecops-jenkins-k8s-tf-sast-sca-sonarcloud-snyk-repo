@@ -5,7 +5,7 @@ pipeline {
             PRISMA_API_URL="https://api.prismacloud.io"
         }
         tools { 
-        maven 'Maven_6_1_130'  
+        maven 'Maven_3_2_5'  
         }
         stages {
            stage('CompileandRunSonarAnalysis') {
